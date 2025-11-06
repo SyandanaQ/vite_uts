@@ -59,7 +59,7 @@ structure:
 setup:
   - step: "Clone repository"
     command: |
-      git clone https://github.com/syandanaq/vite-uts.git
+      git clone https://github.com/syandanaq/vite_uts.git
       cd vite-uts
   - step: "Install dependencies"
     command: npm install
