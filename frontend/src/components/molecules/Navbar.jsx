@@ -12,9 +12,24 @@ export default function Navbar() {
       ? "text-yellow-300 font-semibold"
       : "hover:text-yellow-200 transition";
 
+  const navStyle = {
+    background: 'linear-gradient(135deg, rgb(147 51 234), rgb(126 34 206))',
+    color: 'white',
+    padding: '0.75rem 1.5rem',
+    boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)'
+  };
+
+  const containerStyle = {
+    maxWidth: '80rem',
+    margin: '0 auto',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between'
+  };
+
   return (
-    <nav className="bg-blue-600 text-white px-6 py-3 shadow-md">
-      <div className="container mx-auto flex items-center justify-between">
+    <nav style={navStyle}>
+      <div style={containerStyle}>
         {/* Logo */}
         <NavLink to="/" className="flex items-center gap-2 text-2xl font-bold">
           <Ticket size={28} />
@@ -38,7 +53,12 @@ export default function Navbar() {
               <span className="font-semibold">Halo, {user.username}</span>
               <button
                 onClick={logout}
-                className="bg-red-500 px-3 py-1 rounded text-sm hover:bg-red-600"
+                className="btn btn-sm"
+                style={{ 
+                  background: 'rgb(239 68 68)', 
+                  color: 'white',
+                  padding: '0.5rem 0.75rem'
+                }}
               >
                 Logout
               </button>
@@ -72,7 +92,11 @@ export default function Navbar() {
               <span className="font-semibold text-center">Halo, {user.username}</span>
               <button
                 onClick={() => { logout(); setOpen(false); }}
-                className="bg-red-500 px-3 py-1 rounded text-sm hover:bg-red-600"
+                className="btn btn-sm"
+                style={{ 
+                  background: 'rgb(239 68 68)', 
+                  color: 'white'
+                }}
               >
                 Logout
               </button>

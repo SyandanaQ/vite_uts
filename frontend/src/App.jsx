@@ -6,6 +6,8 @@ import Order from "./pages/Order";
 import Login from "./pages/Login";
 import Admin from "./pages/Admin";
 import ProtectedRoute from "./components/templates/ProtectedRoute";
+import SuperAdmin from "./pages/SuperAdmin";
+
 
 export default function App() {
   return (
@@ -23,6 +25,8 @@ export default function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/order" element={<Order />} />
         <Route path="/admin" element={<Admin />} />
+        <Route path="/superadmin" element={<SuperAdmin />} />
+
       </Route>
     </Routes>
   );
